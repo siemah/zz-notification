@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Push Notification Expo
  * Plugin URI: https://github.com/siemah/zz-notification
@@ -8,3 +9,5 @@
  * Author URI: https://github.com/siemah/
  * 
  */
+
+include __DIR__ . "/admin/menu.php";

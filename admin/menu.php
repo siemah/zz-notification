@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__ . "/ui/home.php";
+include_once __DIR__ . "/ui/settings.php";
 
 add_action("admin_menu", "zz_expo_notification_home_page");
 function zz_expo_notification_home_page()
@@ -16,20 +17,13 @@ function zz_expo_notification_home_page()
     20,
   );
   // home page
-  add_submenu_page(
+  $save_settings_details_hookname = add_submenu_page(
     "zz-expo-notification",
     "Settings",
     "Settings",
     "create_users",
     "zz-expo-notification-settings",
-    "zz_home_page_html",
+    "zz_settings_page_html",
   );
-  // add_submenu_page(
-  //   "zz-expo-notification",
-  //   "Settings",
-  //   "Settings",
-  //   "create_users",
-  //   "zz-expo-notification-settings",
-  //   "zz_home_page_html",
-  // );
+  add_action("load-" . $save_settings_details_hookname, "zz_settings_page_submit");
 }

@@ -52,7 +52,7 @@ function zz_settings_page_submit()
 
     // do not try to save the option if its didnt change
     if ($changes_needed) {
-      $is_saved = update_option(EXPO_ACCESS_TOKEN_OPTION_NAME, $_POST["zz_expo_access_token"]);
+      $is_saved = update_option(EXPO_ACCESS_TOKEN_OPTION_NAME, $_POST["zz_expo_access_token"], FALSE);
     } else {
       $is_saved = TRUE;
     }

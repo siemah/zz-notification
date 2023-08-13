@@ -19,3 +19,7 @@ If you want to target your platform just remove the following from `composer.jso
     "platform-check": false
 }
 ```
+
+## Credits
+
+We want to salut [ctwillie](https://github.com/ctwillie) for his package [ctwillie/expo-server-sdk-php](https://github.com/ctwillie/expo-server-sdk-php/).

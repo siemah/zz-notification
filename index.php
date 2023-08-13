@@ -11,6 +11,7 @@
  */
 
 include __DIR__ . "/admin/menu.php";
+include __DIR__ . "/api/user-notification-token.php";
 
 // the name of the expo access token in the website option
 define("EXPO_ACCESS_TOKEN_OPTION_NAME", "zz_expo_access_token");

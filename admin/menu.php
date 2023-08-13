@@ -9,7 +9,7 @@ function zz_expo_notification_home_page()
   // create menu
   $send_notification_hookname = add_menu_page(
     "Push notification for mobile app",
-    "Home",
+    "Expo Push Notification",
     "create_users",
     "zz-expo-notification",
     "zz_home_page_html",

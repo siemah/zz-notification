@@ -1,0 +1,20 @@
+{
+    "name": "siemah/expo-notification-for-wordpress",
+    "require": {
+        "ctwillie/expo-server-sdk-php": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Siemah\\ExpoNotificationForWordpress\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "siemah",
+            "email": "hmi.dayenio@gmail.com"
+        }
+    ],
+    "config": {
+        "platform-check": false
+    }
+}

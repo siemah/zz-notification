@@ -1,7 +1,5 @@
 <?php
 
-define("EXPO_ACCESS_TOKEN_OPTION_NAME", "zz_expo_access_token");
-
 function zz_settings_page_html()
 {
   $expo_token = get_option(EXPO_ACCESS_TOKEN_OPTION_NAME, "");

@@ -15,6 +15,8 @@ include __DIR__ . "/api/user-notification-token.php";
 
 // the name of the expo access token in the website option
 define("EXPO_ACCESS_TOKEN_OPTION_NAME", "zz_expo_access_token");
+// the name of the expo access token in the website option
+define("EXPO_APP_SCHEME", "zz_expo_app_scheme");
 /**
  * name of the user mobile app token for its push notification
  * will used as a meta_key in the usermeta table

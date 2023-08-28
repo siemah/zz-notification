@@ -61,6 +61,7 @@ function zz_home_page_html()
 function zz_home_page_submit()
 {
   $expo_access_token = get_option(EXPO_ACCESS_TOKEN_OPTION_NAME, "");
+  $expo_app_scheme = get_option(EXPO_APP_SCHEME, "");
 
   if (
     'POST' === $_SERVER['REQUEST_METHOD'] &&
@@ -70,14 +71,18 @@ function zz_home_page_submit()
   ) {
     extract($_POST);
     // get all users tokens
-    $tokens = get_users_tokens();
+    $tokens   = get_users_tokens();
     $messages = [];
+    $path     = trim($_POST["path"], "/");
 
     foreach ($tokens as $token) {
       $expoMessage = new ExpoMessage([
         'title' => $title,
         'body'  => $message,
-        'to'    => $token
+        'to'    => $token,
+        'data'  => [
+          'url' => "$expo_app_scheme://$path"
+        ]
       ]);
       $user_message = $expoMessage->setData([])->playSound();
       array_push($messages, $user_message);
